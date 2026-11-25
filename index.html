@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Namibia Mining Portal</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="description" content="Screen, score and shortlist Namibia's mineral licences for 13 minerals." />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">◆</span>
+      <div>
+        <h1>Namibia Mining Portal</h1>
+        <p>Licence screening &amp; site recommendation</p>
+      </div>
+    </div>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="tabs" role="tablist">
+        <button class="tab active" data-tab="explore" role="tab" aria-selected="true">Explore</button>
+        <button class="tab" data-tab="recommend" role="tab" aria-selected="false">Recommend</button>
+        <button class="tab" data-tab="shortlist" role="tab" aria-selected="false">Shortlist <span class="count-pill" id="shortlist-count">0</span></button>
+      </nav>
+
+      <!-- Explore -->
+      <section class="panel" id="panel-explore">
+        <div class="segmented" role="radiogroup" aria-label="What to explore">
+          <button class="seg active" data-explore="licences" role="radio" aria-checked="true">Licences</button>
+          <button class="seg" data-explore="sites" role="radio" aria-checked="false">Mines &amp; projects</button>
+        </div>
+        <input type="search" id="search" placeholder="Search EPL number, holder, town…" aria-label="Search" />
+        <div class="field">
+          <label for="filter-mineral">Mineral</label>
+          <select id="filter-mineral"></select>
+        </div>
+        <fieldset class="field">
+          <legend>Status</legend>
+          <div class="chips" id="filter-status"></div>
+        </fieldset>
+        <fieldset class="field" id="filter-type-wrap">
+          <legend>Licence type</legend>
+          <div class="chips" id="filter-type"></div>
+        </fieldset>
+        <div class="list-head"><span id="result-count"></span></div>
+        <ul class="site-list" id="explore-list"></ul>
+        <button class="more hidden" id="explore-more" type="button">Show more</button>
+      </section>
+
+      <!-- Recommend -->
+      <section class="panel hidden" id="panel-recommend">
+        <div class="field">
+          <label for="rec-mineral">Target mineral</label>
+          <select id="rec-mineral"></select>
+        </div>
+        <div class="segmented" role="radiogroup" aria-label="Recommendation mode">
+          <button class="seg active" data-mode="licences" role="radio" aria-checked="true">Licences</button>
+          <button class="seg" data-mode="sites" role="radio" aria-checked="false">Known mines</button>
+          <button class="seg" data-mode="areas" role="radio" aria-checked="false">Open ground</button>
+        </div>
+        <p class="hint" id="mode-hint"></p>
+        <fieldset class="field" id="rec-status-wrap">
+          <legend>Licence status</legend>
+          <div class="chips" id="rec-status"></div>
+        </fieldset>
+        <fieldset class="field" id="rec-type-wrap">
+          <legend>Licence type</legend>
+          <div class="chips" id="rec-type"></div>
+        </fieldset>
+        <details class="weights">
+          <summary>Scoring weights</summary>
+          <div id="weights"></div>
+          <button class="link" id="reset-weights" type="button">Reset to defaults</button>
+        </details>
+        <div class="list-head"><span id="rank-count"></span></div>
+        <ol class="rank-list" id="rank-list"></ol>
+        <button class="more hidden" id="rank-more" type="button">Show more</button>
+      </section>
+
+      <!-- Shortlist -->
+      <section class="panel hidden" id="panel-shortlist">
+        <p class="hint">Star licences from the map, lists or detail panel. Your shortlist is saved in this browser.</p>
+        <div class="field">
+          <label for="sl-mineral">Score shortlist for</label>
+          <select id="sl-mineral"></select>
+        </div>
+        <div class="btn-row">
+          <button class="btn primary" id="sl-report" type="button">Shortlist report</button>
+          <button class="btn" id="sl-csv" type="button">Export CSV</button>
+          <button class="btn ghost" id="sl-clear" type="button">Clear</button>
+        </div>
+        <ol class="rank-list" id="shortlist-list"></ol>
+      </section>
+
+      <!-- Detail drawer -->
+      <section class="detail hidden" id="detail" aria-live="polite">
+        <button class="back" id="detail-back" type="button">← Back</button>
+        <div id="detail-body"></div>
+      </section>
+    </aside>
+
+    <div class="map-wrap">
+      <div id="map" aria-label="Map of Namibia"></div>
+      <div class="legend" id="legend"></div>
+      <div class="loading" id="loading">Loading licences…</div>
+    </div>
+  </main>
+
+  <footer class="disclaimer" id="disclaimer"></footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

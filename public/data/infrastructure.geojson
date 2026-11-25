@@ -1,0 +1,40 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "description": "Schematic infrastructure: ports, main towns, TransNamib rail corridors (straight segments between stations) and approximate protected areas. For screening only.",
+    "compiled": "2026-11-25"
+  },
+  "features": [
+    {"type":"Feature","properties":{"kind":"port","name":"Port of Walvis Bay"},"geometry":{"type":"Point","coordinates":[14.50,-22.95]}},
+    {"type":"Feature","properties":{"kind":"port","name":"Port of Lüderitz"},"geometry":{"type":"Point","coordinates":[15.16,-26.64]}},
+
+    {"type":"Feature","properties":{"kind":"town","name":"Windhoek","capital":true},"geometry":{"type":"Point","coordinates":[17.08,-22.56]}},
+    {"type":"Feature","properties":{"kind":"town","name":"Swakopmund"},"geometry":{"type":"Point","coordinates":[14.53,-22.68]}},
+    {"type":"Feature","properties":{"kind":"town","name":"Arandis"},"geometry":{"type":"Point","coordinates":[14.97,-22.42]}},
+    {"type":"Feature","properties":{"kind":"town","name":"Karibib"},"geometry":{"type":"Point","coordinates":[15.83,-21.94]}},
+    {"type":"Feature","properties":{"kind":"town","name":"Otjiwarongo"},"geometry":{"type":"Point","coordinates":[16.65,-20.46]}},
+    {"type":"Feature","properties":{"kind":"town","name":"Tsumeb"},"geometry":{"type":"Point","coordinates":[17.72,-19.24]}},
+    {"type":"Feature","properties":{"kind":"town","name":"Grootfontein"},"geometry":{"type":"Point","coordinates":[18.11,-19.57]}},
+    {"type":"Feature","properties":{"kind":"town","name":"Oshakati"},"geometry":{"type":"Point","coordinates":[15.69,-17.79]}},
+    {"type":"Feature","properties":{"kind":"town","name":"Rundu"},"geometry":{"type":"Point","coordinates":[19.77,-17.92]}},
+    {"type":"Feature","properties":{"kind":"town","name":"Katima Mulilo"},"geometry":{"type":"Point","coordinates":[24.27,-17.50]}},
+    {"type":"Feature","properties":{"kind":"town","name":"Gobabis"},"geometry":{"type":"Point","coordinates":[18.97,-22.45]}},
+    {"type":"Feature","properties":{"kind":"town","name":"Mariental"},"geometry":{"type":"Point","coordinates":[17.96,-24.63]}},
+    {"type":"Feature","properties":{"kind":"town","name":"Keetmanshoop"},"geometry":{"type":"Point","coordinates":[18.13,-26.58]}},
+    {"type":"Feature","properties":{"kind":"town","name":"Rosh Pinah"},"geometry":{"type":"Point","coordinates":[16.75,-27.96]}},
+    {"type":"Feature","properties":{"kind":"town","name":"Oranjemund"},"geometry":{"type":"Point","coordinates":[16.43,-28.55]}},
+    {"type":"Feature","properties":{"kind":"town","name":"Khorixas"},"geometry":{"type":"Point","coordinates":[14.97,-20.37]}},
+    {"type":"Feature","properties":{"kind":"town","name":"Opuwo"},"geometry":{"type":"Point","coordinates":[13.84,-18.06]}},
+
+    {"type":"Feature","properties":{"kind":"rail","name":"Walvis Bay – Windhoek – Lüderitz line"},"geometry":{"type":"LineString","coordinates":[[14.51,-22.96],[14.53,-22.68],[14.97,-22.42],[15.60,-22.00],[15.83,-21.94],[16.92,-21.98],[17.08,-22.56],[17.08,-23.32],[17.58,-24.07],[17.96,-24.63],[18.13,-26.58],[17.78,-26.82],[16.26,-26.66],[15.16,-26.65]]}},
+    {"type":"Feature","properties":{"kind":"rail","name":"Keetmanshoop – Ariamsvlei (to South Africa)"},"geometry":{"type":"LineString","coordinates":[[18.13,-26.58],[18.37,-27.73],[18.75,-28.01],[19.84,-28.12]]}},
+    {"type":"Feature","properties":{"kind":"rail","name":"Northern line Usakos – Tsumeb – Oshikango"},"geometry":{"type":"LineString","coordinates":[[15.60,-22.00],[15.93,-21.42],[16.19,-20.89],[16.65,-20.46],[17.34,-19.64],[17.72,-19.24],[17.62,-18.62],[15.95,-17.91],[15.89,-17.40]]}},
+    {"type":"Feature","properties":{"kind":"rail","name":"Otavi – Grootfontein branch"},"geometry":{"type":"LineString","coordinates":[[17.34,-19.64],[18.11,-19.57]]}},
+    {"type":"Feature","properties":{"kind":"rail","name":"Windhoek – Gobabis line"},"geometry":{"type":"LineString","coordinates":[[17.08,-22.56],[17.55,-22.40],[18.25,-22.30],[18.97,-22.45]]}},
+
+    {"type":"Feature","properties":{"kind":"protected","name":"Etosha National Park (approx.)"},"geometry":{"type":"Polygon","coordinates":[[[14.35,-19.20],[15.50,-18.55],[16.90,-18.50],[17.10,-18.80],[16.40,-19.30],[15.00,-19.40],[14.35,-19.20]]]}},
+    {"type":"Feature","properties":{"kind":"protected","name":"Skeleton Coast National Park (approx.)"},"geometry":{"type":"Polygon","coordinates":[[[11.75,-17.25],[12.60,-17.30],[13.90,-20.00],[13.60,-21.00],[13.00,-20.00],[11.75,-17.25]]]}},
+    {"type":"Feature","properties":{"kind":"protected","name":"Namib-Naukluft Park core (approx.)"},"geometry":{"type":"Polygon","coordinates":[[[14.60,-23.40],[15.60,-23.30],[16.20,-24.00],[16.00,-25.00],[15.40,-25.80],[14.80,-25.40],[14.55,-24.20],[14.60,-23.40]]]}},
+    {"type":"Feature","properties":{"kind":"protected","name":"Bwabwata National Park (approx.)"},"geometry":{"type":"Polygon","coordinates":[[[21.00,-17.80],[23.40,-17.80],[23.40,-18.15],[21.00,-18.15],[21.00,-17.80]]]}}
+  ]
+}
